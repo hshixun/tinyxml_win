@@ -1,6 +1,12 @@
 # TinyXML with Visual Studio 2015 build notes
 
-### Build
+### Notes
+
+  - Remove test prj and use TINYXML_USE_STL only
+  - tinyxmlSTL.lib, tinyxml.h
+
+###  
+  
 
 ### References
 
