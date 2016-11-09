@@ -15,7 +15,7 @@ PROFILE        := NO
 
 # TINYXML_USE_STL can be used to turn on STL support. NO, then STL
 # will not be used. YES will include the STL files.
-TINYXML_USE_STL := NO
+TINYXML_USE_STL := YES
 
 #****************************************************************************
 
@@ -90,7 +90,7 @@ all: ${OUTPUT}
 # Source files
 #****************************************************************************
 
-SRCS := tinyxml.cpp tinyxmlparser.cpp xmltest.cpp tinyxmlerror.cpp tinystr.cpp
+SRCS := tinyxml.cpp tinyxmlparser.cpp tinyxmlerror.cpp
 
 # Add on the sources for libraries
 SRCS := ${SRCS}
@@ -124,7 +124,6 @@ clean:
 depend:
 	#makedepend ${INCS} ${SRCS}
 
-tinyxml.o: tinyxml.h tinystr.h
-tinyxmlparser.o: tinyxml.h tinystr.h
-xmltest.o: tinyxml.h tinystr.h
-tinyxmlerror.o: tinyxml.h tinystr.h
+tinyxml.o: tinyxml.h
+tinyxmlparser.o: tinyxml.h
+tinyxmlerror.o: tinyxml.h
